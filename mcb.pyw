@@ -21,6 +21,8 @@ if(len(sys.argv==3) and sys.argv[1].lower()=='save'):       #saving clipboard co
 elif(len(sys.argv==2)):                                     
     if(sys.argv[1].lower()=='list'):                        
         pyperclip.copy=str(list(mcbShelf.keys()))           #copying all the names of keywords saved in it
+    elif(sys.argv[1].lower()=='delete'):
+        mcbShelf.clear()                                    #deleting all the names of keywords saved in it
     else:
         pyperclip.copied=str(mcbShelf[sys.argv[1]])         #copying the content corresponding tothe demanding keyword in command line which can later be pasted outside using normal operaration
 
